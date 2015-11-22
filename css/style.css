@@ -51,8 +51,9 @@ body {
 	.fixed{
 		width:50% !important;
 	}
-
 }
+
+
 
 
 header{
@@ -187,11 +188,21 @@ header h1{
 #vote-confirm{
 	width: calc(70% - 2em);
 	margin: 20vh auto;
-	background-color: white;
+	background-color: rgba(0,0,0,.1);
 	padding: 1em;
 	border-radius: 2em;
 	text-align: center;
 }
+
+.voteconfirmwrap{
+
+	height:100%;
+	width: 100%;
+	position: absolute;
+	top:40px;
+	background-color: rgba(255,255,255,.5);
+}
+
 
 #next{
 	background-color: #BBE7D2;
@@ -207,10 +218,18 @@ header h1{
 	border-radius: 7.5vh;
 	background-color: green;
 	background-size:20%;
+	color: white;
 	background-repeat:no-repeat;
 	background-position:center;
 }
 
+.vote-icon{
+	background-image:url("../data/icons-03.png");
+	background-repeat:no-repeat;
+	height: 70px;
+    background-size: contain;
+	background-position:center;
+}
 
 #nav-toggle { 
 	position: absolute; 
