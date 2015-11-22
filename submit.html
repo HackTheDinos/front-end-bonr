@@ -16,7 +16,7 @@
 <body>
 
 	<header class="fixed">
-	<h1> </h1>
+
 		<a id="nav-toggle" class="hamburgermenu" href="#"><span></span></a>
 
 
@@ -37,17 +37,16 @@
 				<p>We do not perform appraisals on specimens and cannot tell you the value of a fossil.</p>
 			</div>
 
-			<form action="submit" method="post" enctype="multipart/form-data">
+			<form id="add-fossil-form" action="">
 				<div id="file-upload">
-					<input type="file" name="file[]" accept="image/*" multiple id="file" value="upload images">
+					<input type="file" name="file[]" accept="image/*" id="file" value="upload images">
 				</div>
 				<input class="form-element" type="date" name="date">
 				<input class="form-element" type="text" name="zipcode" placeholder="specimen location zipcode">
 				<textarea class="form-element" name="comments" rows="5" cols="20" placeholder="tell us more about your fossil"></textarea>
 
-				<input class="form-element" id="submit-form-btn" type="submit" value="submit fossil">
+				<input class="form-element submit" id="fossil-form-submit" type="submit" value="submit fossil">
 			</form>
-
 		</section>
 	</main>
 
