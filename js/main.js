@@ -21,16 +21,22 @@ app.main = (function() {
 		// }
 	}
 
-	
-
+	var profile = $('#profile');
 
 	var attachEvents = function(){
-		//listening for clicks. 
+		$('#no').click(function(){
+			console.log("pan left");
+			$('#profile').css('animationName', 'panleft').css('WebkitAnimationPlayState', 'running').css('animationPlayState', 'running');
+		})
+		$('#yes').click(function(){
+			console.log("pan right");
+			$('#profile').css('animationName', 'panright').css('WebkitAnimationPlayState', 'running').css('animationPlayState', 'running');
+		})
 	}
 
 	var init = function(){
 		attachEvents();
-		render();
+		// render();
 	};
 
 	return {

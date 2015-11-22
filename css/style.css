@@ -28,6 +28,19 @@ body {
 	margin: auto;
 	border-radius: 25px;
 	overflow: scroll;
+
+	animation-name: panleft;
+	animation-duration: 2s; 
+	animation-timing-function: ease-out; 
+	animation-delay: 0;
+	animation-direction: normal;
+
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+
+	animation-fill-mode: none;
+	animation-play-state: paused; 
+	-webkit-animation-play-state: paused;
 }
 
 #profile-image {
@@ -53,13 +66,6 @@ body {
 	border-radius: 0 0 25px 25px;
 }
 
-.vote-button {
-	height: 15vh;
-	width: 15vh;
-	border-radius: 7.5vh;
-	background-color: green;
-}
-
 #no{
 	float: left;
 	margin-left: 15vw;
@@ -70,4 +76,36 @@ body {
 	float: right;
 	margin-right: 15vw;
 	margin-top: .6em;
+}
+
+.vote-button {
+	height: 15vh;
+	width: 15vh;
+	border-radius: 7.5vh;
+	background-color: green;
+}
+
+@keyframes panleft {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8) translate(-150%, -25%) rotate(-30deg);
+  }
+  100% {
+  	transform: scale(0.5) translate(-250%, -50%) rotate(-60deg);	
+  }
+}
+
+
+@keyframes panright {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8) translate(150%, -25%) rotate(30deg);
+  }
+  100% {
+  	transform: scale(0.5) translate(250%, -50%) rotate(60deg);	
+  }
 }
