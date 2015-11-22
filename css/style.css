@@ -273,6 +273,15 @@ header h1{
 	text-align: center;
 }
 
+.dropdownmenu a{
+	text-decoration: none !important;
+	color: white;
+}
+
+.dropdownmenu a:hover{
+	color: pink;
+}
+
 .menudropped{
 	top:0; 
 }
@@ -310,4 +319,3 @@ header h1{
       transform: scale(0.5) translate(500%, -200%) rotate(100deg);
   }
 }
-
