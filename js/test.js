@@ -1,10 +1,5 @@
 
 
-document.querySelector( "#nav-toggle" )
-  .addEventListener( "click", function() {
-    this.classList.toggle( "active" );
-  });
-
 var myElement = document.getElementById('profile-content');
 var profileImage = document.getElementById('profile-content');
 
