@@ -29,11 +29,19 @@
 }
 
 body {
+	padding-top: 3em;
+	height: 100vh;
+	background-image: url('../data/background.jpg');
+	background-size: cover;
+    background-attachment: fixed;
+
+}
+/*body {
 	width:100%;
 	background-image:url("../data/background.jpg");
 	height:100%;
  	font-family: 'Futura-Medium', 'Roboto', sans-serif;
-}
+}*/
 
 @media screen and (orientation:landscape){
 	body {
@@ -46,15 +54,12 @@ body {
 
 }
 
-#nav{
-	box-shadow: inset 0 4px #0acea8, inset 0 8px white, inset 0 12px #0acea8, inset 0 16px white, inset 0 20px #0acea8, inset 0 24px white;
-}
 
 header{
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 2em;
+	height: 50px;
 	background-color: #2a2b2b;
 }
 
@@ -83,8 +88,10 @@ header h1{
 .sampleImage{
 	width:100%;
 }
-
-#profile {
+#profile{
+	background-color:white;
+}
+#profile-content {
   /*background: url("../data/sample.jpg") no-repeat fixed center;*/
   /*background-size:contain;*/
   /*background: silver;*/
@@ -94,13 +101,8 @@ header h1{
   margin-top:0;
   z-index: 1;
   background-color:white;
-}
-
-#profile-image{
-
-
   animation-name: panleft;
-  animation-duration: 2s; 
+  animation-duration: 1s; 
   animation-timing-function: ease-out; 
   animation-delay: 0;
   animation-direction: normal;
@@ -113,22 +115,30 @@ header h1{
   -webkit-animation-play-state: paused; 
 }
 
+#profile-image{
+
+
+}
+
 #twitterHandle{
 	width:35%;
 	height:20%;
-	margin:0 0 80% 0;
+	margin:0 0 80% 5%;
 	position:absolute;
-	font-size:150%;
-	/*text-align:left;*/
+	font-size:130%;
+	text-align:left;
 	top:10%;
 	z-index:100;
 	text-transform: uppercase;
 	font-weight:800;
+	color:white;
+    text-shadow: 2px 2px 15px #000000;
 
 }
 
 #profile-text{
 	text-align:left;
+	margin:2%;
 }
 
 #thumbContainer{
@@ -136,6 +146,10 @@ header h1{
 }
 
 #thumbContainer img{
+	width:40%;
+}
+#scrollLead{
+	height: 5%;
 
 }
 
@@ -161,9 +175,9 @@ header h1{
 }
 
 .vote-button {
-	height: 80%;
-	width: 40%;
-	margin-top:1%;
+	height: 70%;
+	width: 43%;
+	margin:3%;
 	border-radius: 7.5vh;
 	background-color: green;
 	background-size:20%;
@@ -171,19 +185,59 @@ header h1{
 	background-position:center;
 }
 
+
+#nav-toggle { 
+	position: absolute; 
+	left:1%;
+ }
+
+#nav-toggle { 
+	cursor: pointer; 
+	padding: 3%;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px; 
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+
+
 @keyframes panleft {
   0% {
     /*transform: scale(0.5);*/
     /*border-radius: 10%;*/
   }
-  80% {
-    background-color: orange;
-    transform: scale(0.2) translate(-500%, -200%) rotate(-100deg);
-  }
   100% {
-    background-color: yellow;
-  }
-}
+    transform: scale(0.2) translate(-500%, -200%) rotate(-100deg);
+  }}
 
 
 @keyframes panright {
@@ -193,13 +247,8 @@ header h1{
     /*background-color: red;*/
     /*border-radius: 20%;*/
   }
-  80% {
-    background-color: orange;
-    transform: scale(0.5) translate(500%, -200%) rotate(100deg);
-  }
   100% {
-
-    background-color: yellow;
+      transform: scale(0.5) translate(500%, -200%) rotate(100deg);
   }
 }
 

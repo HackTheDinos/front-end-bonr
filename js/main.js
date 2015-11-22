@@ -2,8 +2,6 @@ var app = app || {};
 
 app.main = (function() {
 
-
-
 	// var render = function(template, containerElement, method, data){
 	var render = function(template, containerElement, data){
 		console.log(template + ' in ' + containerElement);
@@ -21,16 +19,16 @@ app.main = (function() {
 		// }
 	}
 
-	var profile = $('#profile');
+	var profile = $('#profile-content');
 
 	var attachEvents = function(){
 		$('#no').click(function(){
 			console.log("pan left");
-			$('#profile-image').css('animationName', 'panleft').css('WebkitAnimationPlayState', 'running').css('animationPlayState', 'running');
+			$('#profile-content').css('animationName', 'panleft').css('WebkitAnimationPlayState', 'running').css('animationPlayState', 'running');
 		})
 		$('#yes').click(function(){
 			console.log("pan right");
-			$('#profile-image').css('animationName', 'panright').css('WebkitAnimationPlayState', 'running').css('animationPlayState', 'running');
+			$('#profile-content').css('animationName', 'panright').css('WebkitAnimationPlayState', 'running').css('animationPlayState', 'running');
 		})
 	}
 

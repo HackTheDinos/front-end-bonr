@@ -1,5 +1,12 @@
-var myElement = document.getElementById('profile');
-var profileImage = document.getElementById('profile-image');
+
+
+document.querySelector( "#nav-toggle" )
+  .addEventListener( "click", function() {
+    this.classList.toggle( "active" );
+  });
+
+var myElement = document.getElementById('profile-content');
+var profileImage = document.getElementById('profile-content');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
-header{
+/*header{
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -22,15 +22,15 @@ body {
 	background-image: url('../data/background.jpg');
 	background-size: cover;
 
-}
+}*/
 
 #confirm{
-	width: calc(80vw - 2em);
-	height: calc(90vh - 2em);
+/*	width: calc(80vw - 2em);
+	height: calc(90vh - 2em);*/
 	padding: 2em;
 	margin: auto;
 	background-color: white;
-	overflow: scroll;
+	overflow: hidden;
 }
 
 #confirm h1 {
