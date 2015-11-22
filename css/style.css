@@ -110,3 +110,17 @@ body {
   	transform: scale(0.5) translate(250%, -50%) rotate(60deg);	
   }
 }
+
+
+.dropdownmenu a{
+	text-decoration: none !important;
+	color: white;
+}
+
+.dropdownmenu a:active{
+color: red;
+}
+
+.dropdownmenu a:visited{
+color: pink;
+}

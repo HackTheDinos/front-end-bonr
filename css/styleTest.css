@@ -37,11 +37,22 @@ body {
     overflow-x: hidden;
  	font-family: 'Futura-Medium', 'Roboto', sans-serif;
 }
-/*body {
-	width:100%;
-	background-image:url("../data/background.jpg");
-	height:100%;
-}*/
+
+
+.dropdownmenu a{
+	text-decoration: none;
+	color: white;
+}
+
+.dropdownmenu:hover a{
+color: #BBE7D2;
+}
+
+
+.dropdownmenu a:visited{
+color: white;
+}
+
 
 @media screen and (orientation:landscape){
 	body {
@@ -244,7 +255,7 @@ header h1{
 
 
 .hamburgermenu{
-
+	height:100%;
 	 z-index: 200;
 	 position: fixed;
 }
@@ -252,10 +263,10 @@ header h1{
 
 .dropdownmenu{
 	padding-top: 20px;
+	padding-bottom: 20px;
 	color: white;
 	background-color:#2a2b2b ;
 	width: 100%;
-	height:120px;
 	     -webkit-transition: all .5s; /* Safari */
 	transition: all .5s;
 	top: -120px;
