@@ -29,7 +29,10 @@ body {
 	height: calc(90vh - 2em);*/
 	padding: 2em;
 	margin: auto;
-	background-color: white;
+	/*background-color: white;*/
+    background-image: url('../data/confirm-splash.jpg');
+    background-size: cover;
+    overflow-x: hidden;
 	overflow: hidden;
 }
 

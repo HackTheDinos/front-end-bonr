@@ -2,7 +2,8 @@ var app = app || {};
 
 var files = [];
 
-var server = 'http://10.20.64.78:8080';
+// var server = 'http://10.20.64.78:8080';
+var server = 'http://hack.jimsaunders.net';
 // var server = 'http://localhost:8080';
 
 var submitFossil = function(id) {
@@ -10,11 +11,11 @@ var submitFossil = function(id) {
   var formdata = _.object($("#add-fossil-form").serializeArray().map(function(v) {return [v.name, v.value];} ));
   var payload = new FormData();
   payload.append('pictures', [id]);
-  payload.append('submissionDate', formdata['date']);
+  // payload.append('submissionDate', formdata['date']);
   payload.append('description', formdata['comments']);
   payload = {
     pictures: [id],
-    submissionDate: new Date(formdata['date']).toISOString().substring(0, 10),
+    // submissionDate: new Date(formdata['date']).toISOString().substring(0, 10),
     description: formdata['comments'],
   };
   console.log(payload);
@@ -23,7 +24,7 @@ var submitFossil = function(id) {
       url: server + '/fossils',
       data: JSON.stringify(payload),
       processData: false,
-      contentType: false,
+      contentType: 'application/json',
       success: function(response) {
         console.log('fossil submitted');
       },
