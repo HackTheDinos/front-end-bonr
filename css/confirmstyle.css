@@ -43,9 +43,17 @@ body {
 	font-weight: normal;
 }
 
-#buttons{
-	margin-top: 10em;
+#logo{
+	width: 150px;
+	height: 150px;
+	border-radius: 25px;
+	margin: 3em auto;
+	background-color: black;
 }
+
+/*#buttons{
+	margin-top: 10em;
+}*/
 
 .button-element {
 	margin-top: .5em;
