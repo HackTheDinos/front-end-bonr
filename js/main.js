@@ -14,6 +14,25 @@ app.main = (function() {
 
 	}
 
+	// var sendVote = function(fossilId, bool){
+	// 	$.ajax({
+	// 	    contentType: 'application/json',
+	// 	    data: JSON.stringify({
+	// 	        "vote": bool
+	// 	    }),
+	// 	    dataType: 'json',
+	// 	    success: function(data){
+	// 	        console.log("device control succeeded");
+	// 	    },
+	// 	    error: function(){
+	// 	        console.log("Device control failed");
+	// 	    },
+	// 	    processData: false,
+	// 	    type: 'POST',
+	// 	    url: 'http://localhost:8080/fossils/' + fossilId + '/votes'
+	// 	});
+	// }
+
 	// var render = function(template, containerElement, method, data){
 	var render = function(template, containerElement, data){
 		console.log(template + ' in ' + containerElement);
@@ -25,26 +44,84 @@ app.main = (function() {
 		var compiled =  _.template(templateToCompile);
 
 		$(containerElement).html(compiled({data: data}));
-		attachEvents();	
+		attachEvents();
+		$('#main-container').fadeIn();
+		// listenforSwipe();	
 	}
 
 	var profile = $('#profile-content');
 	var vote = '';
 
+	// var listenforSwipe = function(){
+	// 	var myElement = document.getElementById('profile-content');
+
+	// 	var mc = new Hammer(myElement);
+
+	// 	// listen to events...
+	// 	mc.on("panleft panright tap press", function(ev) {
+	// 	    //myElement.textContent = ev.type +" gesture detected.";
+
+	// 	    if (ev.type == "panleft"){
+	// 			profileImage.style.animationName = ev.type;
+	// 	    	console.log(profileImage.style.WebkitAnimationPlayState);
+	// 			profileImage.style.WebkitAnimationPlayState = "running";
+	// 			profileImage.style.animationPlayState = "running";
+	// 			vote = "NO";
+	// 			render('vote-confirm', '#main-container', vote);
+	// 	    } else if (ev.type == "panright"){
+	// 	    	profileImage.style.animationName = ev.type;
+	// 	    	console.log(profileImage.style.WebkitAnimationPlayState);
+	// 			profileImage.style.WebkitAnimationPlayState = "running";
+	// 			profileImage.style.animationPlayState = "running";
+	// 			vote = "YES";
+	// 			render('vote-confirm', '#main-container', vote);
+	// 	    } else {
+	// 	    	profileImage.style.animationName = ev.type;
+	// 	    }
+	// 	});
+	// }
+
 	var attachEvents = function(){
+		// listenforSwipe();
+
 		$('#no').click(function(){
 			console.log("pan left");
-			$('#profile-content').css('animationName', 'panleft').css('WebkitAnimationPlayState', 'running').css('animationPlayState', 'running');
 			vote = "NO";
-			render('vote-confirm', '#main-container', vote);
-		})
+			$('#profile').addClass('animation');
+
+			$('.animation').css({'animationName': 'panleft', 'WebkitAnimationPlayState': 'running', 'animationPlayState': 'running'})
+						   .delay(600)
+						   .queue(function(){
+						   		// console.log("done");
+						   		$('#main-container').css('display', 'none');
+						   		render('vote-confirm', '#main-container', vote);
+						   });
+		});
+
 		$('#yes').click(function(){
-			console.log("pan right");
-			$('#profile-content').css('animationName', 'panright').css('WebkitAnimationPlayState', 'running').css('animationPlayState', 'running');
+			console.log("pan left");
 			vote = "YES";
-			render('vote-confirm', '#main-container', vote);
-		})
+			$('#profile').addClass('animation');
+
+			$('.animation').css({'animationName': 'panright', 'WebkitAnimationPlayState': 'running', 'animationPlayState': 'running'})
+						   .delay(600)
+						   .queue(function(){
+						   		// console.log("done");
+						   		$('#main-container').css('display', 'none');
+						   		render('vote-confirm', '#main-container', vote);
+						   });
+		});
+
+		//wait for animation to end then render next screen
+		// $('#profile-content').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+		// 	function(e) {
+		// 		console.log("done");
+		//     	// render('vote-confirm', '#main-container', vote);
+		// 	}
+		// );
+			// render('vote-confirm', '#main-container', vote);
 		$('#next').click(function(){
+			$('#main-container').css('display', 'none');
 			getProfile(profileArray[which]);
 		})
 	}
@@ -63,13 +140,22 @@ app.main = (function() {
 	var init = function(){
 		attachEvents();
 		
-		// $.get('/fossils', function(data){
+		// $.get('http://localhost:8080/fossils', function(data){
 		// 	console.log(data);
-		// 	profiles = data;
+		// 	// profiles = data;
 
 			getProfile(profileArray[which]);
 
-		// })
+		// });
+
+		// $.get('http://localhost:8080/fossils/1/votes', function(data){
+		// 	console.log(data);
+		// 	// profiles = data;
+
+
+		// });
+
+		// sendVote(1, true);
 		
 	};
 
