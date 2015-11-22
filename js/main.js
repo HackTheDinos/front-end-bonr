@@ -34,7 +34,7 @@ app.main = (function() {
 
 	var init = function(){
 		attachEvents();
-		// render();
+		render(profile, );
 	};
 
 	return {
