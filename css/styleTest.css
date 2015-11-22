@@ -1,6 +1,55 @@
 #myElement {
   background: silver;
-  height: 300px;
+  height: 50%;
   text-align: center;
   font: 30px/300px Helvetica, Arial, sans-serif;
+
+  animation-name: panleft;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: normal;
+
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+
+  animation-fill-mode: none;
+  animation-play-state: paused; 
+  -webkit-animation-play-state: paused; 
 }
+
+@keyframes panleft {
+  0% {
+    transform: scale(0.5);
+
+    background-color: red;
+    border-radius: 20%;
+  }
+  50% {
+    background-color: orange;
+    transform: scale(0.2) translate(-500%, -200%) rotate(-100deg);
+  }
+  100% {
+
+    background-color: yellow;
+  }
+}
+
+
+@keyframes panright {
+  0% {
+    transform: scale(0.5);
+
+    background-color: red;
+    border-radius: 20%;
+  }
+  50% {
+    background-color: orange;
+    transform: scale(0.2) translate(500%, -200%) rotate(100deg);
+  }
+  100% {
+
+    background-color: yellow;
+  }
+}
+
