@@ -2,8 +2,11 @@ var app = app || {};
 
 app.main = (function() {
 
-	var render = function(template, containerElement, method, data){
-		console.log(method + ' ' + template + ' in ' + containerElement);
+
+
+	// var render = function(template, containerElement, method, data){
+	var render = function(template, containerElement, data){
+		console.log(template + ' in ' + containerElement);
 		if(data !== undefined){
 			console.log(data);
 		}
@@ -11,11 +14,14 @@ app.main = (function() {
 		var templateToCompile = $('#tpl-' + template).html();
 		var compiled =  _.template(templateToCompile);
 
-		if(method === 'replace'){
-			$(containerElement).html(compiled({data: data}));	
-		}else if(method === 'append'){
-			$(containerElement).append(compiled({data: data}));
-		}
+		// if(method === 'replace'){
+		// 	$(containerElement).html(compiled({data: data}));	
+		// }else if(method === 'append'){
+		// 	$(containerElement).append(compiled({data: data}));
+		// }
+	}
+
+	
 
 
 	var attachEvents = function(){
