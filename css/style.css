@@ -1,0 +1,73 @@
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 2em;
+	background-color: black;
+}
+
+header h1{
+	color: white;
+	font-size: 1em;
+	margin: .5em 0 0 2em;
+}
+
+body {
+	padding-top: 2.5em;
+	height: 100vh;
+	background: #B0B0B0;
+	background: -webkit-linear-gradient(to top, #B0B0B0 , #F4F5F0);
+	background: linear-gradient(to top, #B0B0B0 , #F4F5F0); 
+}
+
+#profile {
+	height: calc(80vh - 2.5em - 25px);
+	background-color: red;
+	width: 90%;
+	padding-top: 25px;
+	margin: auto;
+	border-radius: 25px;
+	overflow: scroll;
+}
+
+#profile-image {
+	width: 80%;
+	height: 45vh;
+	margin: auto;
+	background-color: green;
+	border-radius: 10px;
+}
+
+#profile-text{
+	width: calc(80% - 2em);
+	background-color: blue;
+	margin: auto;
+	padding: 1em;
+}
+
+#vote-container {
+	height: calc(20vh - .5em);
+	width: 90%;
+	margin: auto;
+/*	background-color: yellow;*/
+	border-radius: 0 0 25px 25px;
+}
+
+.vote-button {
+	height: 15vh;
+	width: 15vh;
+	border-radius: 7.5vh;
+	background-color: green;
+}
+
+#no{
+	float: left;
+	margin-left: 15vw;
+	margin-top: .6em;
+}
+
+#yes{
+	float: right;
+	margin-right: 15vw;
+	margin-top: .6em;
+}
