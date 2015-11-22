@@ -3,6 +3,11 @@
 var myElement = document.getElementById('profile-content');
 var profileImage = document.getElementById('profile-content');
 
+//demo for stan
+//var testImage = document.getElementById('profile-image');
+//testImage.src="https://files.slack.com/files-pri/T0F1RNWJE-F0F2RS65U/logo_small-03.png";
+
+
 // create a simple instance
 // by default, it only adds horizontal recognizers
 var mc = new Hammer(myElement);
@@ -18,6 +23,9 @@ mc.on("panleft panright tap press", function(ev) {
 		profileImage.style.WebkitAnimationPlayState = "running";
 		// Standard syntax
 		profileImage.style.animationPlayState = "running";
+    } else {
+    	profileImage.style.animationName = ev.type;
     }
+
 
 });
