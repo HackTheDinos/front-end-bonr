@@ -1,4 +1,5 @@
-var myElement = document.getElementById('myElement');
+var myElement = document.getElementById('profile');
+var profileImage = document.getElementById('profile-image');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
@@ -6,15 +7,15 @@ var mc = new Hammer(myElement);
 
 // listen to events...
 mc.on("panleft panright tap press", function(ev) {
-    myElement.textContent = ev.type +" gesture detected.";
+    //myElement.textContent = ev.type +" gesture detected.";
 
     if (ev.type == "panleft" || ev.type == "panright"){
-    	myElement.style.animationName = ev.type;
-    	console.log(myElement.style.WebkitAnimationPlayState);
-    	
-		myElement.style.WebkitAnimationPlayState = "running";
+    	profileImage.style.animationName = ev.type;
+    	console.log(profileImage.style.WebkitAnimationPlayState);
+
+		profileImage.style.WebkitAnimationPlayState = "running";
 		// Standard syntax
-		myElement.style.animationPlayState = "running";
+		profileImage.style.animationPlayState = "running";
     }
 
 });

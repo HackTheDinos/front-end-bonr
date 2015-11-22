@@ -8,18 +8,48 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 	<link rel="stylesheet" href="css/normalize.min.css">
 	<link rel="stylesheet" href="css/styleTest.css">
+
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
 </head>
 
 <body>
 
 
-<div id="myElement">default</div>
+	<header class="fixed">
+		<h1>FOSS'L</h1>
+	</header>
+	<main>
 
-	<!-- 
+	<section id="profile">
+		<div id="twitterHandle">@fossil4life</div>
+
+		<img class="sampleImage" id="profile-image" src="data/sample.jpg">
+
+		<div id="thumbContainer">
+			<img src="data/sampleThumb.jpg">
+			<img src="data/sampleThumb.jpg">
+		</div>
+		<div id="profile-text">
+					Saturnalia Crataeomus Tylosteus Aepisaurus Velocisaurus Oryctodromeus Coelurosauravus Achelousaurus Tribelesodon Kaatedocus Ganzhousaurus Plateosauravus Altirhinus Trinisaura Janenschia Vitakridrinda Palaeopteryx Wuerhosaurus Yunnanosaurus Talarurus Sinotyrannus Wakinosaurus Zapalasaurus Albisaurus Symphyrophus Frenguellisaurus Amphicoelias Futabasaurus Condorraptor Dravidosaurus Leptoceratops Panamericansaurus Janenschia Riojasuchus Crichtonsaurus Qantassaurus Shenzhouraptor Archaeornithomimus Barrosasaurus Laelaps Albalophosaurus Tenontosaurus Jeholosaurus Cedarosaurus Kunmingosaurus Saichania Amargasaurus Algoasaurus Ischisaurus Dicraeosaurus Syrmosaurus Lagosuchus Sarcolestes Eoceratops
+		</div>
+	</section>
+
+	<section id="vote-container" class="fixed">
+		<div class="vote-button" id="no">
+		</div>
+		<div class="vote-button" id="yes">
+		</div>
+	</section>
+
+	
 	<!-- Templates -->
 	
 	<!-- Submit form -->
+
+	</main>
+
+
 
 	<script id="tpl-submit" type="text/html">
 
@@ -35,6 +65,8 @@
 	<script type="text/javascript" src="js/main.js"> </script>
 	<script type="text/javascript" src="js/hammer.min.js"></script>
 	<script type="text/javascript" src="js/test.js"></script>
+
+
 
 </body>
 </html>
