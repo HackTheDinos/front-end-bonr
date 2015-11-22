@@ -190,9 +190,10 @@ header h1{
 }
 
 .vote-button {
-	height: 70%;
+	height: 50%;
 	width: 43%;
 	margin:3%;
+	margin-top:8%;
 	border-radius: 7.5vh;
 	background-color: green;
 	background-size:20%;
