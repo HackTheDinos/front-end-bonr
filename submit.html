@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FOSS'L</title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/submitstyle.css">
+<!-- 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"> -->
+</head>
+
+<body>
+
+	<header>
+		<h1>FOSS'L</h1>
+	</header>
+	<main>
+		<section id='submit'>
+			<h1>Submission Guidelines</h1>
+			<div id="guidelines">
+				<p>Please take very sharp photos of the specimen (no more than 3 photos that are no larger than 500k each). Please include a scale in the photo of the specimen, such as a ruler or a coin. Please also include the date the specimen was found, the location it was found at, and a description of the specimen. </p>
+
+				<p>Members of the AMNH community will take a look at photos of the specimens using our Fossil app before submissions are examined by members of the Division of Paleontology.</p>
+
+				<p>We do not perform appraisals on specimens and cannot tell you the value of a fossil.</p>
+			</div>
+
+			<form action="submit" method="post" enctype="multipart/form-data">
+				<div id="file-upload">
+					<input type="file" name="file[]" accept="image/*" multiple id="file" value="upload images">
+				</div>
+				<input class="form-element" type="date" name="date">
+				<input class="form-element" type="text" name="zipcode" placeholder="specimen location zipcode">
+				<input class="form-element" type="text" name="describe" placeholder="tell us more about your fossil">
+
+				<input class="form-element" id="submit-form-btn" type="submit" value="submit fossil">
+			</form>
+
+		</section>
+	</main>
+
+	<script type="text/javascript" src="js/jquery-min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/hammer.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/main.js"> </script>
+</body>
+</html>
