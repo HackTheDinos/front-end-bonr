@@ -128,12 +128,12 @@ app.main = (function() {
 	}
 
 	var profileArray = [
-		// {image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
-		// profileText: "This is profile number one"},
-		// {image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
-		// profileText: "This is profile number two"},
-		// {image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
-		// profileText: "This is profile number three"}
+		{image: ['./data/imgs/12a_Y.jpg', './data/imgs/12b_Y.jpg', './data/imgs/12c_Y.jpg'],
+		profileText: "Hey Carl! I definitely found a super valuable fossil. It's like, a sabertooth bone or something I bet. Please tell me I struck it rich, my man! #Sabertooths4Ever"},
+		{image: ['./data/imgs/21a_N.jpg', './data/imgs/21b_N.jpg', './data/imgs/21c_N.jpg'],
+		profileText: "Hey Carl, this morning I tripped on something strange in my backyard and after digging into the ground I found an abnormally shaped rock. It had a weird texture, and a mild pungent smell, and it kind of resembles a big sea shell. What does this look like to you? Love, Stan."},
+		{image: ['./data/imgs/3a_Y.jpg', './data/imgs/3b_Y.jpg', './data/imgs/3c_Y.jpg'],
+		profileText: "Dear Carl, I went on a hike in the mountains near my house and when I was in this cave, I found a rock that I kind of think looks like a tooth. Do you think that this is a from a dino??"}
 	];
 
 	var which = 0;
@@ -147,7 +147,7 @@ app.main = (function() {
 
 		$.get('http://localhost:8080/fossils', function(data){
 			console.log("data " + data);
-			profileArray = data;
+			// profileArray = data;
 			getProfile(profileArray[which]);
 
 		});

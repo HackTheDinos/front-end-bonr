@@ -40,15 +40,14 @@
 			<div id="profile-content">
 				<div id="twitterHandle" class="fixed">@fossil4life</div>
 
-				<img class="sampleImage" id="profile-image" src="http://localhost:8080/uploads/<%= data.pictures[0].filepath %>">
+				<img class="sampleImage" id="profile-image" src="<%=data.image[0]%>">
 
 				<div id="thumbContainer">
-					<img src="data/thumbSample.jpg">
-					<img src="data/thumbSample.jpg">
+					<img src="<%=data.image[1]%>">
+					<img src="<%=data.image[2]%>">
 				</div>
 				<div id="profile-text">
-							<p> <%= data.description %> </p>
-							<p>Catnipsum dolor sit amet pussy cat, pussy cat miioo-oo-oo mewmew abyssinian cool cat. Climbing simba kitty raining cats and dogs gizmo cat got your tounge. Ackack catnip shorthair nose sunbathe coco sleep on your keyboard cuddle me pouncing. Will they this when theyre older sylvester let the cat out of the bag fur ball. Mmmeoww a cat has nine lives javanese purr arabian meew purr hellcat.</p>
+							<p> <%= data.profileText %> </p>
 				</div>
 			</div>
 		</section>
