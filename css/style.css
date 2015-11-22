@@ -195,11 +195,10 @@ header h1{
 }
 
 .voteconfirmwrap{
-
-	height:100%;
 	width: 100%;
+	height: 100%;
 	position: absolute;
-	top:40px;
+	top: 50px;
 	background-color: rgba(255,255,255,.5);
 }
 
