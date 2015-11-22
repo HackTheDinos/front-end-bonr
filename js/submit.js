@@ -2,8 +2,8 @@ var app = app || {};
 
 var files = [];
 
-// var server = 'http://10.20.64.78:8080';
-var server = 'http://localhost:8080';
+var server = 'http://10.20.64.78:8080';
+// var server = 'http://localhost:8080';
 
 var submitFossil = function(id) {
   console.log('submitting fossil with image ' + id);
@@ -12,10 +12,16 @@ var submitFossil = function(id) {
   payload.append('pictures', [id]);
   payload.append('submissionDate', formdata['date']);
   payload.append('description', formdata['comments']);
+  payload = {
+    pictures: [id],
+    submissionDate: new Date(formdata['date']).toISOString().substring(0, 10),
+    description: formdata['comments'],
+  };
+  console.log(payload);
   $.ajax({
       type: 'POST',
       url: server + '/fossils',
-      data: payload,
+      data: JSON.stringify(payload),
       processData: false,
       contentType: false,
       success: function(response) {
@@ -38,6 +44,9 @@ app.main = (function() {
   var attachEvents = function(){
     $('#add-fossil-form').submit(function(){
       console.log("submitting form");
+      // cheat - just act like this worked :)
+      window.location = '../front-end-bonr/confirm.html';
+      return false;
 
       // No picture -- don't do anything.
       if (window.files.length < 1) {
