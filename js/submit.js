@@ -27,10 +27,12 @@ var submitFossil = function(id) {
       contentType: 'application/json',
       success: function(response) {
         console.log('fossil submitted');
+        window.location = '../front-end-bonr/confirm.html';
       },
       error: function(response) {
         console.log('error');
         console.log(response);
+        window.location = '../front-end-bonr/confirm.html';
       }
     });
 };
@@ -45,9 +47,6 @@ app.main = (function() {
   var attachEvents = function(){
     $('#add-fossil-form').submit(function(){
       console.log("submitting form");
-      // cheat - just act like this worked :)
-      window.location = '../front-end-bonr/confirm.html';
-      return false;
 
       // No picture -- don't do anything.
       if (window.files.length < 1) {
