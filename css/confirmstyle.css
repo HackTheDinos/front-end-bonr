@@ -24,7 +24,7 @@ body {
 
 }
 
-#submit{
+#confirm{
 	width: calc(80vw - 2em);
 	height: calc(90vh - 2em);
 	padding: 2em;
@@ -38,37 +38,38 @@ body {
 	font-weight: bold;
 }
 
-#guidelines{
+#text{
 	font-family: 'Futura-Medium', Helvetica, 'sans-serif';
 	font-weight: normal;
 }
 
-#file-upload{
-	height: 1.5em;
-	padding: 1em;
-	text-align: center;
-	background-color: #BBE7D2;
-	border-radius: 1.5em;
+#buttons{
+	margin-top: 10em;
 }
 
-.form-element {
+.button-element {
 	margin-top: .5em;
 	width: 100%;
+	padding: 1em;
 	font-family: 'Futura-Medium', Helvetica, 'sans-serif';
 	text-transform: uppercase;
-	border-radius: .2em;
-	border: 2px solid #E0E0E0;
-	color: #E0E0E0;
+	border-radius: 2em;
+/*	font-size: 1.5em;*/
+	border: 2px solid white;
+	color: white;
 }
 
-#desc{
-	height: 4em;
+#back-btn{
+	background-color: #19519F;
 }
 
-#submit-form-btn {
-	width: 101%;
+#submit-again-btn{
+	background-color: #BAE1D7;
 }
 
+#tweet-btn{
+	background-color: #5FA9DD;
+}
 /*
 red: F0586D
 green: BBE7D2
@@ -100,29 +101,4 @@ green: BBE7D2
   src: url('font/Futura-MediumItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-
-@keyframes panleft {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8) translate(-150%, -25%) rotate(-30deg);
-  }
-  100% {
-  	transform: scale(0.5) translate(-250%, -50%) rotate(-60deg);	
-  }
-}
-
-
-@keyframes panright {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8) translate(150%, -25%) rotate(30deg);
-  }
-  100% {
-  	transform: scale(0.5) translate(250%, -50%) rotate(60deg);	
-  }
 }
