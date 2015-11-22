@@ -143,14 +143,14 @@ app.main = (function() {
 	var init = function(){
 		attachEvents();
 		console.log("initializing..");
-		
+		getProfile(profileArray[which]);
 
-		$.get('http://localhost:8080/fossils', function(data){
-			console.log("data " + data);
-			// profileArray = data;
-			getProfile(profileArray[which]);
+		// $.get('http://localhost:8080/fossils', function(data){
+		// 	console.log(data);
+		// 	profileArray = data;
+		// 	getProfile(profileArray[which]);
 
-		});
+		// });
 
 		// $.get('http://localhost:8080/fossils/1/votes', function(data){
 		// 	console.log(data);
