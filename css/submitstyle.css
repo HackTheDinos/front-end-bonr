@@ -19,9 +19,8 @@ header h1{
 body {
 	padding-top: 3em;
 	height: 100vh;
-	background: #B0B0B0;
-	background: -webkit-linear-gradient(to top, #B0B0B0 , #F4F5F0);
-	background: linear-gradient(to top, #B0B0B0 , #F4F5F0); 
+	background-image: url('../data/seashells.jpg');
+	background-size: cover;
 
 }
 
@@ -59,8 +58,11 @@ body {
 	text-transform: uppercase;
 	border-radius: .2em;
 	border: 2px solid #E0E0E0;
-	text-align: center;
 	color: #E0E0E0;
+}
+
+#desc{
+	height: 4em;
 }
 
 #submit-form-btn {
