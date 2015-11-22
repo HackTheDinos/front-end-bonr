@@ -115,11 +115,6 @@ header h1{
   -webkit-animation-play-state: paused; 
 }
 
-#profile-image{
-
-
-}
-
 #twitterHandle{
 	width:35%;
 	height:20%;
@@ -187,6 +182,21 @@ header h1{
 	float: right;
 	background-color: #BBE7D2;
 	background-image:url("../data/icons-03.png");
+}
+
+#vote-confirm{
+	width: calc(70% - 2em);
+	margin: 20vh auto;
+	background-color: white;
+	padding: 1em;
+	border-radius: 2em;
+	text-align: center;
+}
+
+#next{
+	background-color: #BBE7D2;
+	padding: 1em;
+	margin: 1em auto;
 }
 
 .vote-button {

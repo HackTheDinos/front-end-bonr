@@ -27,22 +27,27 @@
             <div class="menuitem"><span>LOGOUT</span></div>
         </div>
 	</header>
-	<main>
+
+	<main id="main-container">
+
+	</main>
 	
 	<!-- Templates -->
+
+	<!--PROFILE-->
 	<script id="tpl-profile" type="text/html">
 		<section id="profile">
 			<div id="profile-content">
 				<div id="twitterHandle" class="fixed">@fossil4life</div>
 
-				<img class="sampleImage" id="profile-image" src="data/sample.jpg">
+				<img class="sampleImage" id="profile-image" src="<%= data.image[0] %>">
 
 				<div id="thumbContainer">
-					<img src="data/thumbSample.jpg">
-					<img src="data/thumbSample.jpg">
+					<img src="<%= data.image[1] %>">
+					<img src="<%= data.image[2] %>">
 				</div>
 				<div id="profile-text">
-							Saturnalia Crataeomus Tylosteus Aepisaurus Velocisaurus Oryctodromeus Coelurosauravus Achelousaurus Tribelesodon Kaatedocus Ganzhousaurus Plateosauravus Altirhinus Trinisaura Janenschia Vitakridrinda Palaeopteryx Wuerhosaurus Yunnanosaurus Talarurus Sinotyrannus Wakinosaurus Zapalasaurus Albisaurus Symphyrophus Frenguellisaurus Amphicoelias Futabasaurus Condorraptor Dravidosaurus Leptoceratops Panamericansaurus Janenschia Riojasuchus Crichtonsaurus Qantassaurus Shenzhouraptor Archaeornithomimus Barrosasaurus Laelaps Albalophosaurus Tenontosaurus Jeholosaurus Cedarosaurus Kunmingosaurus Saichania Amargasaurus Algoasaurus Ischisaurus Dicraeosaurus Syrmosaurus Lagosuchus Sarcolestes Eoceratops
+							<%= data.profileText %>
 				</div>
 			</div>
 		</section>
@@ -59,22 +64,17 @@
 		</section>
 
 	</script>
-	
-	<!-- Submit form -->
 
-	</main>
+	<!--VOTE CONFIRM-->
+	<script id="tpl-vote-confirm" type="text/html">
+		<section id="vote-confirm">
+			<h2>you voted</h2>
+			<h1><%= data %></h2>
 
-
-
-	<script id="tpl-submit" type="text/html">
-
+			<div class="vote-button" id="next">NEXT FOSSIL</div>
+		</section>
 	</script>
-
-	<!-- Profile -->
-	<script id="tpl-fossil-profile" type="text/html">
 	
-	</script>
-
 	<script type="text/javascript" src="js/jquery-min.js"></script>
 	<script type="text/javascript" src="js/underscore-min.js"></script>
 	<script type="text/javascript" src="js/hammer.min.js"></script>
