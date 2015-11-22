@@ -4,6 +4,7 @@ app.main = (function() {
 
 
 	var getProfile = function(obj){
+		console.log(obj.description);
 
 		render('profile', '#main-container', obj);
 		which ++;
@@ -35,7 +36,7 @@ app.main = (function() {
 
 	// var render = function(template, containerElement, method, data){
 	var render = function(template, containerElement, data){
-		console.log(template + ' in ' + containerElement);
+		// console.log(template + ' in ' + containerElement);
 		if(data !== undefined){
 			console.log(data);
 		}
@@ -127,28 +128,29 @@ app.main = (function() {
 	}
 
 	var profileArray = [
-		{image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
-		profileText: "This is profile number one"},
-		{image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
-		profileText: "This is profile number two"},
-		{image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
-		profileText: "This is profile number three"}
-	]
+		// {image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
+		// profileText: "This is profile number one"},
+		// {image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
+		// profileText: "This is profile number two"},
+		// {image: ['./data/sample.jpg', './data/thumbSample.jpg', './data/thumbSample.jpg'],
+		// profileText: "This is profile number three"}
+	];
 
 	var which = 0;
+
+	var server = "http://localhost:8080/"
 
 	var init = function(){
 		attachEvents();
 		console.log("initializing..");
 		
 
-		// $.get('http://localhost:8080/fossils', function(data){
-		// 	console.log(data);
-		// 	// profiles = data;
-
+		$.get('http://localhost:8080/fossils', function(data){
+			console.log("data " + data);
+			profileArray = data;
 			getProfile(profileArray[which]);
 
-		// });
+		});
 
 		// $.get('http://localhost:8080/fossils/1/votes', function(data){
 		// 	console.log(data);
