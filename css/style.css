@@ -82,6 +82,10 @@ header h1{
 
 }
 
+#main-container{
+	display: none;
+}
+
 #content {
 	background:black;
 }
@@ -105,7 +109,6 @@ header h1{
 }
 
 .animation{
-	  /*animation-name: panleft;*/
   animation-duration: 1s; 
   animation-timing-function: ease-out; 
   animation-delay: 0;

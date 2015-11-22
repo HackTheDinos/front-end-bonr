@@ -139,7 +139,9 @@ app.main = (function() {
 
 	var init = function(){
 		attachEvents();
+		console.log("initializing..");
 		
+
 		// $.get('http://localhost:8080/fossils', function(data){
 		// 	console.log(data);
 		// 	// profiles = data;
@@ -156,6 +158,7 @@ app.main = (function() {
 		// });
 
 		// sendVote(1, true);
+
 		
 	};
 
